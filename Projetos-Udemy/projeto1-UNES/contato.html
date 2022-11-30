@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNES - Contato</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url(img/fundo2.png);
+    }
+
+    section {
+      width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logotipo {
+      margin-top: 25px;
+      
+    }
+
+    .menu {
+      display: flex;
+      list-style: none;
+      margin-top: 25px;
+    }
+    .capa {
+        margin-top: 18px;
+      }
+
+    article h1 {
+      margin-top: 24px;
+      font-size: 24px;
+    }
+
+    article p{
+      margin-top: 20px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0 30px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <header>
+      <div>
+      <img src="img/logo.png" alt="" class="logotipo">
+      </div>
+      
+      <nav>
+        <div>
+          <ul class="menu">
+            <li>
+              <a href="index.html">Home</a> | 
+            </li>
+            <li>
+              | <a href="quemsomos.html">Quem somos</a> |
+            </li>
+            <li>
+              | <a href="contato.html">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+    <article>
+      <h1>Entre em contato</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suspendisse sit amet mollis nisl.</p>
+      <br>
+      <hr>
+      <br>
+      <form>
+        <label for="">Seu e-mail:</label> <br>
+        <input type="text" name="email"> <br>
+
+        <label for="">Assunto:</label> <br>
+        <input type="text" name="assunto"> <br>
+
+        <label for="">Descrição:</label> <br>
+        <textarea name="description" id="description" cols="20" rows="2.9"></textarea>
+        <br>
+        <button>Enviar</button>
+      </form>
+    </article>
+  </section>
+</body>
+</html>
