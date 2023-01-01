@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  height: 100%;
+}
+
+.contants {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+
+/***********
+
+** HEADER **
+
+***********/
+
+.header{
+  margin: 50px 0 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  letter-spacing: -10px;
+  font-size: 40px;
+}
+
+.header span {
+  font-size: 50px;
+}
+
+.header nav {
+  opacity: 0;
+  z-index: -999999999;
+  transition: background 0.3s ease-in-out;
+}
+
+.header nav #menu-close {
+  background: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 1.5rem;
+  cursor: pointer;
+  right: 1.2rem;
+  z-index: 999999;
+}
+
+.header nav.open{
+  position: fixed;
+  background-color: white;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 75vw;
+  padding: 1.25rem;
+  z-index: 999999;
+  opacity: 1;
+}
+
+.header nav.open ul {
+  position: absolute;
+  top: 50%;
+  list-style: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in;
+}
+
+.header nav.open ul li {
+  margin: 1.5rem 0;
+  font-size: 1.01rem;
+  cursor: pointer;
+}
+
+.header .menu-button button {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+/************
+
+** Article **
+
+*************/
+
+.boxs {
+  display: flex;
+}
+
+.boxs .box {
+  max-width: 640px;
+}
+
+.boxs .box img{
+  width: 100%;
+}
+
+.boxs .texts {
+  display: flex;
+}
+
+.boxs .mainText {
+  width: 300px;
+  margin-top: 20px;
+}
+
+.boxs .mainText h1 {
+  font-size: 45px;
+  line-height: 50px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+
+.box .secondaryText {
+  width: 350px;
+}
+
+.boxs .secondaryText p {
+  display: flex;
+  padding-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  font-size: 13px;
+  line-height: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.boxs .secondaryText button {
+  margin-left: 40px;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  background-color: hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.boxs .secondaryText button:hover {
+  background-color: hsl(240, 100%, 5%);
+}
+
+.boxs > .box2 {
+  margin-left: 20px;
+  background-color: hsl(240, 100%, 5%);
+  padding: 1.25rem 1.25rem 0;
+}
+
+.boxs > .box2 .text h1 {
+  font-size: 30px;
+  font-family: 'Inter', sans-serif;
+  color: hsl(35, 77%, 62%);
+}
+
+.boxs > .box2 .text h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: hsl(36, 100%, 99%);
+}
+
+.boxs > div:last-child article {
+  padding: 2rem 0;
+}
+
+.boxs > div:last-child article:not(:last-child){
+  border-bottom: 1px solid hsl(233, 8%, 79%);
+}
+
+.boxs > .box2 > .text > h2:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+
+.boxs > .box2 .text p {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: hsl(233, 8%, 79%);
+}
+
+.boxs2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'Inter', sans-serif;
+}
+
+.boxs2 .box {
+  display: flex;
+}
+
+.boxs2 .box img {
+  width: 90px;
+  height: 105px;
+}
+
+.boxs2 .text {
+  padding: 0px 20px 10px 20px;
+  width: 240px;
+}
+
+.boxs2 .box .numbers {
+  color: hsl(233, 8%, 79%);
+}
+
+.boxs2 .box a {
+  text-decoration: none;
+  color: black;
+}
+
+.boxs2 .box a:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.boxs2 .box h3 {
+  padding-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.boxs2 .box p {
+  padding-top: 10px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+@media (min-width: 1024px) {
+  .header .menu-button button {
+    display: none;
+  }
+
+  .header nav {
+    opacity: 1;
+    z-index: auto;
+    width: 100%;
+  }
+
+  .header nav.open {
+    position: relative;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    z-index: auto;
+
+  }
+
+  .header nav #menu-close {
+    display: none;
+  }
+
+  .header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    top: 0;
+    gap: 2rem;
+    transform: translateY(0%);
+    list-style: none;
+  }
+
+  .header nav ul li {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contents {
+    width: 1000px;
+  }
+
+  .header .nav .navbar {
+    display: none;
+  }
+
+  .header .nav .menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .header .nav .menu img {
+    width: 50px;
+  }
+
+  .boxs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .boxs .box {
+    max-width: 950px;
+  }
+
+  .boxs .texts {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .boxs .mainText {
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .boxs .mainText h1 {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 60px;
+    
+  }
+
+  .boxs .secondaryText {
+    width: auto;
+  }
+
+  .boxs .secondaryText p {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  
+  .boxs .secondaryText button {
+    display: flex;
+    padding: 20px 30px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .boxs .box2 .text h1 {
+    font-size: 60px;
+  }
+
+  .boxs .box2 .text h2 {
+    font-size: 30px;
+  }
+
+  .boxs .box2 .text p {
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+
+  .boxs2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 20px 10px 20px;
+  }
+}
+
+@media (max-width: 984px) {
+  .contants {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 924px) {
+  .contants {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 820px) {
+  .contants {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .contants {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 540px) {
+  .contants {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 415px) {
+  .contants {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .contants {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .header {
+    margin: 10px 0 15px 0;
+  }
+  
+  .boxs .secondaryText {
+    width: auto;
+  }
+
+  .boxs .secondaryText p {
+    font-size: 15px;
+    padding-left: 0;
+    margin-bottom: 0;
+  } 
+
+  .boxs .secondaryText button {
+    margin-left: 0;
+    margin-bottom: 50px;
+    font-size: 1em;
+    padding: 15px 30px;
+  }
+
+
+  .boxs .box2 .text article {
+    padding-bottom: 30px;
+  }
+
+  .boxs .box2 .text h1 {
+    font-size: 25px;
+  }
+
+  .boxs .box2 .text h2 {
+    font-size: 15px;
+  }
+
+  .boxs .box2 .text p {
+    font-size: 13px;
+  }
+
+  .boxs .box2 {
+    margin-left: auto;
+  }
+
+  .boxs2 {
+    padding-left: 0;
+  }
+
+}
