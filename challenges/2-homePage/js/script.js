@@ -1,11 +1,31 @@
-const navbar = document.querySelector("nav")
-const openMenu = document.getElementById("menu-button")
-const closeMenu = document.getElementById("menu-close")
+const Main = {
+  init: function() {
+    this.cacheSelectors()
+    this.bindEvents()
+  },
 
-openMenu.addEventListener("click", () => {
-  navbar.classList.add("open")
-})
+  cacheSelectors: function() {
+    this.$nav = document.querySelector("nav")
+    this.$openMenu = document.getElementById("menu-button")
+    this.$closeMenu = document.getElementById("menu-close")
+  },
 
-closeMenu.addEventListener("click", () => {
-  navbar.classList.remove("open")
-})
+  bindEvents: function() {
+    const self = this
+    this.$openMenu.onclick = self.Events.menuOpen_click.bind(this)
+    this.$closeMenu.onclick = self.Events.menuClose_click.bind(this)
+  },
+
+  Events: {
+    menuOpen_click: function() {
+      this.$nav.classList.add("open")
+    },
+
+    menuClose_click: function() {
+      this.$nav.classList.remove("open")
+    }
+  }
+}
+
+
+Main.init()
