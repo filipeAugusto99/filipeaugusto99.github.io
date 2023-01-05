@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217deg, 54%, 11%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  display: none;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+.main .card-nft {
+  max-width: 320px;
+  padding: 20px;
+  background-color: hsl(216deg, 50%, 16%);
+  border-radius: 20px;
+  box-shadow: 0 0 30px black;
+}
+.main .card-nft .image-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  cursor: pointer;
+}
+.main .card-nft .image-container img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.main .card-nft .image-container .image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(178deg, 100%, 50%);
+  border-radius: 10px;
+  transition: opacity 0.5s ease;
+}
+.main .card-nft .image-container .image__overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+}
+.main .card-nft .image-container:hover .image__overlay {
+  opacity: 0.7;
+}
+.main .card-nft .content .card__name {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.2em;
+  margin: 25px 0 15px 0;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+.main .card-nft .content .card__name:hover {
+  color: hsl(178deg, 100%, 50%);
+}
+.main .card-nft .content .card__about {
+  color: hsl(215deg, 51%, 70%);
+  font-size: 0.9em;
+  font-weight: 300;
+  line-height: 25px;
+}
+.main .card-nft .content .valueAndTime {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(215deg, 32%, 27%);
+  padding: 15px 0;
+}
+.main .card-nft .content .valueAndTime .card__value {
+  color: hsl(178deg, 100%, 50%);
+  font-size: 0.9em;
+}
+.main .card-nft .content .valueAndTime .card__value img {
+  width: 10px;
+  height: 15px;
+}
+.main .card-nft .content .valueAndTime .card__value img:hover {
+  background-image: url(../images/icon-view.svg);
+}
+.main .card-nft .content .valueAndTime .time-left {
+  position: relative;
+  font-weight: 300;
+  font-size: 0.9em;
+  color: hsl(215deg, 51%, 70%);
+}
+.main .card-nft .content .valueAndTime .time-left img {
+  position: absolute;
+  left: -20px;
+  top: 3px;
+  width: 15px;
+  height: 15px;
+}
+.main .card-nft .content .perfil {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.main .card-nft .content .perfil img {
+  width: 30px;
+  height: 30px;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.main .card-nft .content .perfil .creator {
+  font-weight: 300;
+  font-size: 0.9em;
+  color: hsl(215deg, 51%, 70%);
+}
+.main .card-nft .content .perfil .creator span {
+  cursor: pointer;
+  color: hsl(0deg, 0%, 100%);
+  transition: color 0.5s ease;
+}
+.main .card-nft .content .perfil .creator span:hover {
+  color: hsl(178deg, 100%, 50%);
+}/*# sourceMappingURL=style.css.map */
