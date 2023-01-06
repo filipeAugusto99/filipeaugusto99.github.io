@@ -1,0 +1,210 @@
+@import 'variables';
+@import 'base';
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+.main {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+
+  .container {
+    max-width: 320px;
+    background-color: $color-neutral-dark-blue;
+    border-radius: 20px;
+    .card_raiting.hidden1 {
+      display: block;
+    }
+  
+    .card_raiting {
+      padding: 20px;
+  
+      .icon-star {
+        width: 35px;
+        height: auto;
+        border: 10px solid $color-neutral-medium-dark-blue;
+        border-radius: 50%;
+        background-color: $color-neutral-medium-dark-blue;
+      }
+  
+      .title_raiting {
+        font-size: 1.5em;
+        color: $color-neutral-white;
+        margin: 15px 0;
+      }
+  
+      .about_raiting {
+        font-size: 0.9em;
+        font-weight: 400;
+        color: $color-neutral-light-grey;
+        line-height: 20px;
+      }
+      
+      .raiting {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        
+        .buttons-grade {
+          margin: 20px 0;
+          outline: none;
+          border: none;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          background-color: $color-neutral-medium-dark-blue;
+          color: $color-neutral-light-grey;
+          font-weight: bold;
+          transition: background-color 0.3s ease;
+          cursor: pointer;
+          
+          &:hover {
+            background-color: $color-primary;
+            color: $color-neutral-white;
+          }
+          
+          &:focus {
+            background-color: $color-neutral-medium-grey;
+            color: $color-neutral-white;
+          }
+        }
+      }
+      
+      .button_raiting {
+        display: block;
+        margin: 0 auto;
+        outline: none;
+        border: none;
+        border-radius: 25px;
+        background-color: $color-primary;
+        color: $color-neutral-white;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        width: 100%;
+        padding: 15px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        margin-bottom: 10px;
+        
+        &:hover {
+          background-color: $color-neutral-white;
+          color: $color-primary;
+        }
+      }
+    }
+  }
+  
+  .container-thanks {
+    max-width: 320px;
+    background-color: $color-neutral-dark-blue;
+    border-radius: 20px;
+    .card_thanks.hidden2 {
+      display: none;
+    }
+  
+    .card_thanks {
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+
+      .image_thanks {
+        margin-bottom: 20px;
+      }
+
+      .selected_rate {
+        font-weight: 400;
+        font-size: 1em;
+        color: $color-primary;
+        border-radius: 25px;
+        background-color: $color-neutral-medium-dark-blue;
+        margin-left: 55px;
+        margin-bottom: 20px;
+        width: 175px;
+        padding: 7px 0;
+      }
+
+      .thank_title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: $color-neutral-white;
+      }
+
+      .thank_about {
+        font-size: 0.9em;
+        font-weight: 400;
+        color: $color-neutral-light-grey;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .main {
+    .container {
+      max-width: 450px;
+      border-radius: 25px;
+
+      .card_raiting {
+        .title_raiting {
+          margin-top: 30px;
+          font-size: 2em;
+        }
+    
+        .about_raiting {
+          font-size: 1.2em;
+          line-height: 30px;
+        }
+
+        .raiting {
+          .buttons-grade {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 30px;
+            font-size: 1em;
+          }
+        }
+        .button_raiting {
+          width: 100%;
+          padding: 15px;
+          font-size: 1em;
+        }
+      }
+    }
+
+    .container-thanks {
+      max-width: 450px;
+      
+      border-radius: 25px;
+      .card_thanks {   
+        padding: 24px;
+
+        .image_thanks {
+          margin-top: 20px;
+        }
+
+        .selected_rate {
+          font-size: 1em;
+          margin-top: 10px;
+          margin-left: 120px;
+          border: 35px;
+        }
+
+        .thank_title {
+          margin-top: 40px;
+          margin-bottom: 15px;
+          font-size: 2em;
+        }
+
+        .thank_about {
+          font-size: 1.19em;
+          line-height: 25px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
