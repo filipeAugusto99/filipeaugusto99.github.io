@@ -1,0 +1,16 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution { font-size: 11px; text-align: center; text-decoration: none;}
+.attribution a { color: $color-neutral-white; }
+
+body {
+  font-size: 18px;
+  font-family: 'Barlow', sans-serif;
+  background-color: $color-neutral-white;
+}

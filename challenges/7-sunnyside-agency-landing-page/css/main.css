@@ -1,0 +1,383 @@
+/*
+### Primary
+
+- Soft red: hsl(7, 99%, 70%)
+- Yellow: hsl(51, 100%, 49%)
+- Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
+- Dark blue (photography text): hsl(198, 62%, 26%)
+- Dark moderate cyan (footer): hsl(168, 34%, 41%)
+
+### Neutral
+
+- Very dark desaturated blue: hsl(212, 27%, 19%)
+- Very dark grayish blue: hsl(213, 9%, 39%)
+- Dark grayish blue: hsl(232, 10%, 55%)
+- Grayish blue: hsl(210, 4%, 67%)
+- White: hsl(0, 0%, 100%)
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.attribution a {
+  color: hsl(0deg, 0%, 100%);
+}
+
+body {
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+/*
+### Primary
+
+- Soft red: hsl(7, 99%, 70%)
+- Yellow: hsl(51, 100%, 49%)
+- Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
+- Dark blue (photography text): hsl(198, 62%, 26%)
+- Dark moderate cyan (footer): hsl(168, 34%, 41%)
+
+### Neutral
+
+- Very dark desaturated blue: hsl(212, 27%, 19%)
+- Very dark grayish blue: hsl(213, 9%, 39%)
+- Dark grayish blue: hsl(232, 10%, 55%)
+- Grayish blue: hsl(210, 4%, 67%)
+- White: hsl(0, 0%, 100%)
+
+*/
+.home {
+  position: relative;
+  height: 100vh;
+  background-image: url("../images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.header {
+  padding: 20px;
+}
+.header .header_photos {
+  display: flex;
+  justify-content: space-between;
+}
+.header .header_photos .menu {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.header .header_photos .menu .menu-image {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+.header .nav .navbar {
+  border-radius: 0px -20px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 100%;
+  width: 90vw;
+  height: 62vh;
+  margin-top: 40px;
+  margin-right: 20px;
+  list-style: none;
+  background-color: hsl(0deg, 0%, 100%);
+  transition: all 0.2s ease-in-out;
+}
+.header .nav .navbar li {
+  text-align: center;
+  width: 150px;
+  padding: 15px;
+  margin: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.header .nav .navbar li:hover {
+  text-transform: uppercase;
+  background-color: hsl(51deg, 100%, 49%);
+  border-radius: 30px;
+}
+.header .nav .navbar::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-bottom: 20px solid hsl(0deg, 0%, 100%);
+  transform: translateY(-100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.header .nav .navbar.open {
+  right: 0%;
+}
+
+.home_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home_page .banner {
+  text-align: center;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  font-size: 2.5em;
+  letter-spacing: 6px;
+  color: hsl(0deg, 0%, 100%);
+  text-transform: uppercase;
+  margin: 70px 0 65px 0;
+}
+.home_page .arrow_down {
+  width: 40px;
+  justify-content: center;
+}
+
+.main .services .services_one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.main .services .services_one .egg {
+  position: relative;
+  top: -50px;
+  width: 100%;
+}
+.main .services .services_one .texts {
+  padding: 0 20px 0 20px;
+}
+.main .services .services_one .texts .transform {
+  color: hsl(212deg, 27%, 19%);
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  font-size: 2em;
+}
+.main .services .services_one .texts .transform_text {
+  margin: 30px 0;
+  font-size: 1em;
+  line-height: 30px;
+  color: hsl(232deg, 10%, 55%);
+}
+.main .services .services_one .texts .transform_link {
+  position: relative;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: hsl(212deg, 27%, 19%);
+  z-index: 99;
+}
+.main .services .services_one .texts .transform_link::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  bottom: -3px;
+  right: -10px;
+  border-bottom: 12px solid hsl(51deg, 100%, 49%);
+  border-radius: 10px;
+  opacity: 0.3;
+  z-index: -99;
+}
+.main .services .services_two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 100px;
+}
+.main .services .services_two .glass {
+  position: relative;
+  top: -30px;
+  width: 100%;
+}
+.main .services .services_two .texts {
+  padding: 0 20px 0 20px;
+}
+.main .services .services_two .texts .standout {
+  margin-top: 20px;
+  color: hsl(212deg, 27%, 19%);
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  font-size: 2em;
+}
+.main .services .services_two .texts .standout_text {
+  margin: 30px 0;
+  font-size: 1em;
+  line-height: 30px;
+  color: hsl(232deg, 10%, 55%);
+}
+.main .services .services_two .texts .standout_link {
+  position: relative;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: hsl(212deg, 27%, 19%);
+  z-index: 99;
+}
+.main .services .services_two .texts .standout_link::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  bottom: -3px;
+  right: -10px;
+  border-bottom: 12px solid hsl(7deg, 99%, 70%);
+  border-radius: 10px;
+  opacity: 0.3;
+  z-index: -99;
+}
+.main .projects {
+  margin-top: 75px;
+}
+.main .projects .project_one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.main .projects .project_one .photo {
+  width: 100%;
+}
+.main .projects .project_one .texts {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 70px;
+  padding: 20px;
+}
+.main .projects .project_one .texts .graphic {
+  color: hsl(167deg, 40%, 24%);
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  font-size: 1.7em;
+  margin-bottom: 30px;
+}
+.main .projects .project_one .texts .graphic_text {
+  font-size: 0.9em;
+  line-height: 30px;
+  color: hsl(167deg, 40%, 24%);
+}
+.main .projects .project_two {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.main .projects .project_two .photo {
+  width: 100%;
+}
+.main .projects .project_two .texts {
+  position: absolute;
+  bottom: 70px;
+  padding: 20px;
+}
+.main .projects .project_two .texts .photography {
+  color: hsl(198deg, 62%, 26%);
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  font-size: 1.7em;
+  margin-bottom: 30px;
+}
+.main .projects .project_two .texts .photography_text {
+  font-size: 0.9em;
+  line-height: 30px;
+  color: hsl(198deg, 62%, 26%);
+}
+.main .clients_testimonials {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.main .clients_testimonials .clients {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+.main .clients_testimonials .clients .testimonials {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: hsl(210deg, 4%, 67%);
+  font-family: "Fraunces", sans-serif;
+}
+.main .clients_testimonials .clients img {
+  margin: 60px 0 30px 0;
+  width: 70px;
+  border-radius: 50%;
+}
+.main .clients_testimonials .clients h4 {
+  font-size: 0.9em;
+  line-height: 30px;
+  color: hsl(213deg, 9%, 39%);
+  margin-bottom: 20px;
+}
+.main .clients_testimonials .clients h2 {
+  font-size: 1em;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  color: hsl(212deg, 27%, 19%);
+  margin-bottom: 5px;
+}
+.main .clients_testimonials .clients span {
+  font-size: 0.7em;
+  color: hsl(210deg, 4%, 67%);
+}
+.main .contact {
+  background-color: hsl(167deg, 33%, 60%);
+  text-align: center;
+}
+.main .contact .photos {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .contact .photos img {
+  width: 187.3px;
+}
+.main .contact .texts {
+  padding: 0 20px 0 20px;
+}
+.main .contact .texts h1 {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  font-size: 1.5em;
+  color: hsl(167deg, 40%, 24%);
+  margin: 40px 0 15px 0;
+}
+.main .contact .texts .nav .navbar {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.main .contact .texts .nav .navbar li {
+  font-size: 0.8em;
+  padding: 20px;
+  color: hsl(167deg, 40%, 24%);
+}
+.main .contact .texts .nav .social-medias {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.main .contact .texts .nav .social-medias li {
+  margin: 50px 15px 35px 15px;
+}/*# sourceMappingURL=main.css.map */
