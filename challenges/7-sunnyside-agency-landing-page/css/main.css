@@ -57,6 +57,9 @@ body {
 - White: hsl(0, 0%, 100%)
 
 */
+/***********
+****HOME****
+***********/
 .home {
   position: relative;
   height: 100vh;
@@ -126,6 +129,9 @@ body {
   right: 0%;
 }
 
+/****************
+*** B A N N E R ***
+*******************/
 .home_page {
   display: flex;
   flex-direction: column;
@@ -146,13 +152,18 @@ body {
   justify-content: center;
 }
 
+.main .services {
+  /***************
+  ****SERVICES****
+  ***************/
+}
 .main .services .services_one {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-.main .services .services_one .egg {
+.main .services .services_one picture .egg {
   position: relative;
   top: -50px;
   width: 100%;
@@ -241,6 +252,9 @@ body {
   z-index: -99;
 }
 .main .projects {
+  /***************
+  ****PROJECTS****
+  ***************/
   margin-top: 75px;
 }
 .main .projects .project_one {
@@ -300,9 +314,22 @@ body {
   color: hsl(198deg, 62%, 26%);
 }
 .main .clients_testimonials {
+  /***************
+  ****CLIENTS****
+  ***************/
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin-bottom: 25px;
+}
+.main .clients_testimonials .testimonials {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-top: 50px;
+  color: hsl(210deg, 4%, 67%);
+  font-family: "Fraunces", sans-serif;
 }
 .main .clients_testimonials .clients {
   display: flex;
@@ -310,15 +337,8 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 40px;
-}
-.main .clients_testimonials .clients .testimonials {
-  text-transform: uppercase;
-  font-size: 0.9em;
-  font-weight: 900;
-  letter-spacing: 3px;
-  color: hsl(210deg, 4%, 67%);
-  font-family: "Fraunces", sans-serif;
+  padding: 0px 40px 40px 40px;
+  width: 100%;
 }
 .main .clients_testimonials .clients img {
   margin: 60px 0 30px 0;
@@ -343,6 +363,9 @@ body {
   color: hsl(210deg, 4%, 67%);
 }
 .main .contact {
+  /***************
+  ****CONTACTS****
+  ***************/
   background-color: hsl(167deg, 33%, 60%);
   text-align: center;
 }
@@ -351,7 +374,7 @@ body {
   flex-wrap: wrap;
 }
 .main .contact .photos img {
-  width: 187.3px;
+  width: 187px;
 }
 .main .contact .texts {
   padding: 0 20px 0 20px;
@@ -364,6 +387,7 @@ body {
   margin: 40px 0 15px 0;
 }
 .main .contact .texts .nav .navbar {
+  flex-direction: row;
   display: flex;
   justify-content: center;
   list-style: none;
@@ -380,4 +404,201 @@ body {
 }
 .main .contact .texts .nav .social-medias li {
   margin: 50px 15px 35px 15px;
+}
+
+@media (min-width: 768px) {
+  .home {
+    height: 100vh;
+    background-image: url("../images/desktop/image-header.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .home .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  .home .header .header_photos img {
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+  .home .header .header_photos .menu {
+    display: none;
+  }
+  .home .header .nav {
+    margin-top: 20px;
+  }
+  .home .header .nav .navbar {
+    border-radius: none;
+    position: static;
+    flex-direction: row;
+    width: 37vw;
+    height: 0;
+    margin-top: 0px;
+    margin-right: 0px;
+    list-style: none;
+    color: hsl(0deg, 0%, 100%);
+    transition: none;
+    padding-left: 10px;
+  }
+  .home .header .nav .navbar li {
+    text-align: center;
+    width: 120px;
+    padding: 15px;
+    margin: 0px;
+    transition: none;
+    cursor: pointer;
+  }
+  .home .header .nav .navbar li:hover {
+    text-transform: uppercase;
+    background-color: hsl(198deg, 62%, 26%);
+    border-radius: none;
+  }
+  .home .header .nav .navbar::before {
+    border-left: none;
+    border-bottom: none;
+  }
+  .home .home_page .banner {
+    font-size: 3em;
+    letter-spacing: 12px;
+    margin-bottom: 120px;
+  }
+  .home .home_page .arrow_down {
+    width: 35px;
+    justify-content: center;
+  }
+  .main .services {
+    display: flex;
+    flex-direction: column;
+  }
+  .main .services .services_one {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: start;
+  }
+  .main .services .services_one picture .egg {
+    position: static;
+    width: 100%;
+  }
+  .main .services .services_one .texts {
+    order: -1;
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 10%;
+  }
+  .main .services .services_one .texts .transform {
+    font-size: 2.4em;
+  }
+  .main .services .services_one .texts .transform_text {
+    font-size: 1.01em;
+    margin-bottom: 40px;
+  }
+  .main .services .services_two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    align-items: center;
+    text-align: start;
+    margin-top: -4px;
+  }
+  .main .services .services_two .texts {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 20%;
+  }
+  .main .services .services_two .texts .standout {
+    margin-top: 0;
+    font-size: 2.4em;
+  }
+  .main .services .services_two .texts .standout_text {
+    font-size: 1.01em;
+    margin-bottom: 40px;
+  }
+  .main .services .services_two .glass {
+    position: static;
+  }
+  .main .projects {
+    margin-top: -6px;
+    display: flex;
+  }
+  .main .projects .project_one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  .main .projects .project_one .photo {
+    width: 100%;
+  }
+  .main .projects .project_one .texts {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 70px;
+    padding: 20px;
+  }
+  .main .projects .project_one .texts .graphic {
+    color: hsl(167deg, 40%, 24%);
+    font-family: "Fraunces", sans-serif;
+    font-weight: 900;
+    font-size: 1.7em;
+    margin-bottom: 30px;
+  }
+  .main .projects .project_one .texts .graphic_text {
+    font-size: 0.9em;
+    line-height: 30px;
+    color: hsl(167deg, 40%, 24%);
+  }
+  .main .projects .project_two {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .main .projects .project_two .photo {
+    width: 100%;
+  }
+  .main .projects .project_two .texts {
+    position: absolute;
+    bottom: 70px;
+    padding: 20px;
+  }
+  .main .projects .project_two .texts .photography {
+    color: hsl(198deg, 62%, 26%);
+    font-family: "Fraunces", sans-serif;
+    font-weight: 900;
+    font-size: 1.7em;
+    margin-bottom: 30px;
+  }
+  .main .projects .project_two .texts .photography_text {
+    font-size: 0.9em;
+    line-height: 30px;
+    color: hsl(198deg, 62%, 26%);
+  }
+  .main .clients_testimonials {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    margin-top: 10%;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .main .clients_testimonials .clients {
+    display: flex;
+    flex-direction: row;
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+  .main .clients_testimonials .clients h4 {
+    padding-right: 20px;
+    padding-bottom: 25px;
+  }
+  .main .contact .photos img {
+    width: 25%;
+  }
 }/*# sourceMappingURL=main.css.map */
