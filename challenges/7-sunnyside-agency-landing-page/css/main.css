@@ -357,7 +357,7 @@ body {
 }
 .main .clients_testimonials .testimonials {
   text-transform: uppercase;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 900;
   letter-spacing: 3px;
   margin-top: 50px;
@@ -378,11 +378,13 @@ body {
   width: 70px;
   border-radius: 50%;
 }
-.main .clients_testimonials .clients h4 {
+.main .clients_testimonials .clients h3 {
   font-size: 0.9em;
   line-height: 30px;
   color: hsl(213deg, 9%, 39%);
   margin-bottom: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 .main .clients_testimonials .clients h2 {
   font-size: 1em;
