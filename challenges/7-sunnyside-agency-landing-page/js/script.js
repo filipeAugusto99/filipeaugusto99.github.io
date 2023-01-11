@@ -12,4 +12,3 @@ menu.onclick = function() {
   open = false
   menuMobile.classList.remove('open')
 }
-

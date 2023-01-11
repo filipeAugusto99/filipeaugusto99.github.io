@@ -109,10 +109,19 @@ body {
   transition: all 0.3s ease;
   cursor: pointer;
 }
+.header .nav .navbar li a {
+  color: hsl(232deg, 10%, 55%);
+  text-decoration: none;
+  font-weight: 900;
+}
 .header .nav .navbar li:hover {
   text-transform: uppercase;
   background-color: hsl(51deg, 100%, 49%);
   border-radius: 30px;
+}
+.header .nav .navbar li:hover a {
+  font-weight: 900;
+  color: black;
 }
 .header .nav .navbar::before {
   content: "";
@@ -202,6 +211,18 @@ body {
   border-radius: 10px;
   opacity: 0.3;
   z-index: -99;
+  transition: all 0.3s ease;
+}
+.main .services .services_one .texts .transform_link:hover::before {
+  content: "";
+  opacity: 1;
+  border-radius: 10px;
+  width: 150px;
+  bottom: -3px;
+  right: -10px;
+  border-bottom: 12px solid hsl(51deg, 100%, 49%);
+  border-radius: 10px;
+  z-index: -99;
 }
 .main .services .services_two {
   display: flex;
@@ -249,6 +270,18 @@ body {
   border-bottom: 12px solid hsl(7deg, 99%, 70%);
   border-radius: 10px;
   opacity: 0.3;
+  z-index: -99;
+  transition: all 0.3s ease;
+}
+.main .services .services_two .texts .standout_link:hover::before {
+  content: "";
+  opacity: 1;
+  border-radius: 10px;
+  width: 150px;
+  bottom: -3px;
+  right: -10px;
+  border-bottom: 12px solid hsl(7deg, 99%, 70%);
+  border-radius: 10px;
   z-index: -99;
 }
 .main .projects {
@@ -395,7 +428,14 @@ body {
 .main .contact .texts .nav .navbar li {
   font-size: 0.8em;
   padding: 20px;
+}
+.main .contact .texts .nav .navbar li a {
   color: hsl(167deg, 40%, 24%);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.main .contact .texts .nav .navbar li a:hover {
+  color: hsl(0deg, 0%, 100%);
 }
 .main .contact .texts .nav .social-medias {
   display: flex;
@@ -449,6 +489,9 @@ body {
     margin: 0px;
     transition: none;
     cursor: pointer;
+  }
+  .home .header .nav .navbar li a {
+    color: hsl(0deg, 0%, 100%);
   }
   .home .header .nav .navbar li:hover {
     text-transform: uppercase;
